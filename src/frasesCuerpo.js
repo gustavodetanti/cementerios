@@ -235,6 +235,6 @@
 	};
 
 	return {
-		frase: getFrase
+		frase: getfrase
 	}
 }
