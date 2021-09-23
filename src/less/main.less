@@ -1,0 +1,166 @@
+//lessc src/less/main.less  css/main.css
+
+
+body {
+    margin: 0;
+    background-color: #cccccc;
+    color: #222222;
+
+}
+
+.slider {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: #999999;
+
+    >div {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+user-select: none;
+position: relative;
+
+transition:all 1.5s ease-in-out;
+opacity:0.1;
+
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: scale(1.2, 1.5);
+            transition: transform 3s;
+            user-select: none;
+        }
+        .txt{
+            transform: scale(0.3, 0.3) translateY(600px);
+        position:absolute;
+        top:46%;
+        opacity:0;
+        transition: all 2s;
+        text-align: center;
+        left:0;right:0;
+        h2{
+            color:white;
+        font-size: 42px;
+        display: inline-block;
+        padding:32px 50px;
+        background-color: #00000044;
+        }
+        
+        }
+        
+
+        &.opened {
+            height: 100%;
+            transition: all 1.5s ease-in-out;
+            opacity: 1;
+
+            img {
+                transform: scale(1, 1);
+                transition: transform 3s;
+            }
+            .txt{
+                transform: scale(1, 1)  translateY(0px);
+                opacity: 1;
+                transition: all 2s;
+            }            
+        }
+
+
+
+.subslides{
+width:100%;
+height:100%;
+position: absolute;top:0;left:0;right:0;bottom: 0;
+overflow:hidden;
+>div{
+
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+user-select: none;
+position: relative;
+transition:all 1.5s ease-in-out;
+opacity:0.1;
+
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: scale(1.2, 1.5);
+    transition: transform 3s;
+    user-select: none;
+}
+
+.txt{
+    transform: scale(0.3, 0.3) translateY(600px);
+position:absolute;
+top:46%;
+opacity:0;
+transition: all 2s;
+text-align: center;
+left:0;right:0;
+h2{
+    color:white;
+font-size: 42px;
+display: inline-block;
+padding:32px 50px;
+background-color: #00000044;
+}
+
+}
+
+
+&.opened {
+    width: 100%;
+    transition: all 1.5s ease-in-out;
+    opacity: 1;
+
+    img {
+        transform: scale(1, 1);
+        transition: transform 3s;
+    }
+    .txt{
+        transform: scale(1, 1)  translateY(0px);
+        opacity: 1;
+        transition: all 2s;
+    }            
+}
+
+}
+
+
+}
+
+
+    }//
+
+
+
+}
+
+#prevSection,#nextSection{
+    position: fixed;
+    text-align: center;
+    width:100%;
+z-index: 100;
+color:red;
+font-size: 40px;
+cursor: pointer;
+}
+#prevSection{
+    top:0;
+}
+#nextSection{
+    position: fixed;
+    text-align: center;
+    width:100%;
+    bottom:0;
+    
+}
