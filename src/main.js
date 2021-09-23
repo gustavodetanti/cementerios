@@ -1,11 +1,10 @@
 
 //esbuild --bundle src/main.js --outfile=js/main.bundle.js  --watch --minify
-
-import {Comp} from "./components/Comp.js";
-import {Send} from "./components/functions/Send";
+ 
 import { VerticalTexts } from "./components/VerticalTexts.js";
 import {addSvg,addSvgElement,setAttrs} from "./svg/Svg";
 import {XF} from "./frasesCuerpo.js";
+import { SectionSlider } from "./components/SectionSlider";
 
 let AUTO=false;
 let apdiv;
@@ -62,9 +61,8 @@ function prev(){
 }
 
 function showActual(){
-let adv=slides[index];
-console.log(index);
-slides.map((s,i)=>{
+ 
+ slides.map((s,i)=>{
     if(i==index){s.classList.add('opened')}else{
         s.classList.remove('opened')
     }
@@ -80,17 +78,6 @@ next();
 
 
  }
-
-
-function SectionSlider(div){
-let slides=[...div.children];
-console.log(slides.length,"sub slides")
-
-
-}
-
-
-
 
 
  function svgInit(){
