@@ -1,4 +1,8 @@
-﻿export function XF() {
+﻿function rand(arr){
+	return arr[parseInt(Math.random()*arr.length)];
+}
+
+export function XF() {
 
 
 	var sums = ["muerto", "ataúd",
@@ -114,8 +118,7 @@
 		///////////////
 		var frr = fr.join(" ");
 		frr = frr.substring(0, 1).toUpperCase() + frr.substring(1) + ".";
-		logg(frr);
-
+		 
 		frr = frr.split(" de el ").join(" del ");
 		frr = frr.split(" y i").join(" e i");
 		frr = frr.split(" o o").join(" u o");
@@ -224,8 +227,7 @@
 		///////////////
 		var frr = fr.join(" ");
 		frr = frr.substring(0, 1).toUpperCase() + frr.substring(1) + ".";
-		logg(frr);
-
+		 
 		frr = frr.split(" de el ").join(" del ");
 		frr = frr.split(" y i").join(" e i");
 		frr = frr.split(" o o").join(" u o");

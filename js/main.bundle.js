@@ -60,6 +60,9 @@ padding:12px 8px;
   }
 
   // src/frasesCuerpo.js
+  function rand(arr) {
+    return arr[parseInt(Math.random() * arr.length)];
+  }
   function XF() {
     var sums = [
       "muerto",
@@ -268,7 +271,6 @@ padding:12px 8px;
       getSujeto([gen, num, fr]);
       var frr = fr.join(" ");
       frr = frr.substring(0, 1).toUpperCase() + frr.substring(1) + ".";
-      logg(frr);
       frr = frr.split(" de el ").join(" del ");
       frr = frr.split(" y i").join(" e i");
       frr = frr.split(" o o").join(" u o");
@@ -342,7 +344,6 @@ padding:12px 8px;
       }
       var frr = fr.join(" ");
       frr = frr.substring(0, 1).toUpperCase() + frr.substring(1) + ".";
-      logg(frr);
       frr = frr.split(" de el ").join(" del ");
       frr = frr.split(" y i").join(" e i");
       frr = frr.split(" o o").join(" u o");
