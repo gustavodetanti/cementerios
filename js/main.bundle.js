@@ -350,7 +350,7 @@ padding:12px 8px;
     }
     ;
     return {
-      frase: getFrase
+      frase: getfrase
     };
   }
 
