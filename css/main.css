@@ -31,19 +31,20 @@ body {
 .slider > div .txt {
   transform: scale(0.3, 0.3) translateY(0px);
   position: absolute;
-  top: 46%;
+  top: 60px;
   opacity: 0;
   transition: all 2s;
-  text-align: center;
-  left: 0;
-  right: 0;
+  text-align: right;
+  right: 40px;
+  background-color: #00000044;
+  padding: 12px 24px;
+  letter-spacing: 1px;
 }
 .slider > div .txt h2 {
   color: white;
-  font-size: 42px;
+  font-size: 24px;
   display: inline-block;
-  padding: 32px 50px;
-  background-color: #00000044;
+  font-weight: 200;
 }
 .slider > div.opened {
   height: 100%;
@@ -70,14 +71,18 @@ body {
   overflow: hidden;
 }
 .slider > div .subslides .subslidesLine > div {
-  width: 0%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   user-select: none;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: inline-block;
-  transition: all 1.5s ease-in-out;
-  opacity: 0.1;
+  transition: opacity 1.5s ease-in-out;
+  opacity: 0;
 }
 .slider > div .subslides .subslidesLine > div img {
   object-fit: cover;
@@ -89,35 +94,20 @@ body {
   user-select: none;
 }
 .slider > div .subslides .subslidesLine > div .txt {
-  transform: scale(0.3, 0.3) translateY(0px);
-  position: absolute;
-  top: 46%;
-  opacity: 0;
-  transition: all 2s;
-  text-align: center;
-  left: 0;
-  right: 0;
+  top: auto;
+  bottom: 46px;
 }
 .slider > div .subslides .subslidesLine > div .txt h2 {
   color: white;
-  font-size: 42px;
-  display: inline-block;
-  padding: 32px 50px;
-  background-color: #00000044;
+  font-size: 32px;
 }
 .slider > div .subslides .subslidesLine > div.opened {
-  width: 100vw;
-  transition: all 1.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
   opacity: 1;
 }
 .slider > div .subslides .subslidesLine > div.opened img {
   transform: scale(1, 1);
   transition: transform 1.5s;
-}
-.slider > div .subslides .subslidesLine > div.opened .txt {
-  transform: scale(1, 1) translateY(0px);
-  opacity: 1;
-  transition: all 2s;
 }
 #prevSection,
 #nextSection {
@@ -125,7 +115,7 @@ body {
   text-align: center;
   width: 100%;
   z-index: 100;
-  color: red;
+  color: #9d00ff;
   font-size: 40px;
   cursor: pointer;
 }
@@ -138,10 +128,17 @@ body {
   width: 100%;
   bottom: 0;
 }
+.slider > div .subslides .leftBut {
+  left: 20px;
+}
+.slider > div .subslides .rightBut {
+  right: 20px;
+}
 .slider > div .subslides .subslidesLine {
   position: absolute;
   top: 0;
   left: 0;
+  font-size: 0;
 }
 .slider > div .subslides .subslidesLine > div {
   display: inline-block;

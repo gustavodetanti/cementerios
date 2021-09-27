@@ -1,5 +1,6 @@
-export function SectionSlider(div) {
+export function SectionSlider(div,parent) {
     let line=div.querySelector('.subslidesLine');
+    let img=parent?parent.querySelector('img'):null;
     let slides = [...line.children];
     let index = 0;
     let n = slides.length;
@@ -34,6 +35,12 @@ function prv(e){
     showActual();
 }
 function showActual(){
+    if(img){if(index==0){
+      //img.style.opacity=1;  
+    }else{
+        //img.style.opacity=0;
+
+    }}
     slides.map((s,i)=>{
         if(i==index){s.classList.add('opened')}else{
             s.classList.remove('opened')
