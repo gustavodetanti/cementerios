@@ -3,20 +3,33 @@
 
 import { addSvg, addSvgElement, setAttrs } from "./svg/Svg";
  import { SectionSlider } from "./components/SectionSlider";
-
+import {Send} from "./components/functions/Send"
 let AUTO = false;
 let apdiv;
-let xf;
-window.addEventListener('DOMContentLoaded', (event) => {
-    apdiv = document.getElementById('js-app');
  
-    init();
+window.addEventListener('DOMContentLoaded', (event) => {
+apdiv = document.getElementById('js-app');
+     init();
+Send("json/main.json",json=>projectLoaded(json))
 
-});
+    });
 
 
 
+ function projectLoaded(json){
 
+    console.log(json.sections);
+let str=``;
+json.sections.map((s,i)=>{
+
+    str+=`<a data-n='${i}' >${s.title}</a> `;
+
+})
+ 
+let nav=document.createElement('nav');
+nav.innerHTML=str;
+document.querySelector('header').appendChild(nav);
+ }
 
 
 function init() {
@@ -79,7 +92,9 @@ function svgInit() {
 }
 
 
+function Page(cont,peg){
 
+}
 
 
 (() => {

@@ -18,6 +18,11 @@ body > header {
   text-transform: uppercase;
   background-color: #ffffffbb;
 }
+nav a {
+  color: black;
+  text-transform: none;
+  display: block;
+}
 .slider {
   width: 100vw;
   height: 100vh;
