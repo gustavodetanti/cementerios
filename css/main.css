@@ -67,6 +67,13 @@ nav a {
   display: inline-block;
   font-weight: 200;
 }
+.slider > div .txt h3 {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  display: inline-block;
+  font-weight: 200;
+}
 .slider > div.opened {
   height: 100%;
   transition: all 1.5s ease-in-out;
