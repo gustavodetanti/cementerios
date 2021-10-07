@@ -5,41 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cementerios</title>
+    <title>Cementerio: ¿un lugar para qué muerte?</title>
     <link rel='stylesheet' href='css/main.css'>
     <style>
-body{
-    margin:0;
-}
-
+        body {
+            margin: 0;
+            background-color: black;;
+        }
     </style>
 </head>
 
 <body>
 
-    <div class='four-spots'>
-        <div class='fs-line'>
-            <div>
-                <figure>
-                    <img src='img/Cuidadores/Foto de ingreso.jpg'>
-                    <figcaption>
-                        <h2>Los Cuidadores</h2>
-                        <h3>Historias intergeneracionales en el trabajo de cuidado</h3>
-                    </figcaption>
-                </figure>
-            </div>
+    <div class='intro'>
+        <img class='full' src='img/home1.jpg'>
 
-            <div>
-                <figure>
-                    <img src='img/Deudos/La historia de Joaco/2.JPG'>
-                    <figcaption>
-                        <h2>Los Deudos</h2>
-                        <h3>Historias de memoria y de vida</h3>
-                    </figcaption>
-                </figure>
+
+        <div class='intro-txt'>
+
+            <div class='dtxt'>
+                <h1>Cementerio</h1>
+                <h3>¿un lugar para qué muerte?</h3>
+
+                <br><br><br>
+                <span class='play'><svg width='32' height='32' id="icon-play3" viewBox="0 0 32 32">
+                        <path fill='#9d00ff'
+                            d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z">
+                        </path>
+
+                    </svg></span>
             </div>
         </div>
 
+    </div>
+
+    <div class='four-spots'>
 
         <div class='fs-line'>
             <div>
@@ -68,12 +68,102 @@ body{
         </div>
 
 
+
+
+        <div class='fs-line'>
+            <div>
+                <figure>
+                    <img src='img/Cuidadores/Foto de ingreso.jpg'>
+                    <figcaption>
+                        <h2>Los cuidadores</h2>
+                        <h3>Historias intergeneracionales en el trabajo de cuidado</h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div>
+                <figure>
+                    <img src='img/Deudos/La historia de Joaco/3.jpg'>
+                    <figcaption>
+                        <h2>Los deudos</h2>
+                        <h3>Historias de memoria y de vida</h3>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+
+
+
     </div>
 
 
 
 
+    <script src='js/jquery-1.12.4.min.js'></script>
+    <script>
 
+        $(function () {
+            let introimg = $(".intro img.full").eq(0);
+            let playbut = $(".intro .play");
+            let h1 = $(".intro .intro-txt h1");
+            let h3 = $(".intro .intro-txt h3");
+
+
+            splash();
+            function splash() {
+                console.log("splash")
+                waitLoad(introimg, function () {
+                    console.log("loaded");
+
+                    h1.addClass("loaded")
+                    setTimeout(() => {
+                        h3.addClass("loaded")
+                    }, 1000);
+                    setTimeout(() => {
+                        introimg.addClass("loaded")
+
+                    }, 3000);
+                    setTimeout(() => {
+                        playbut.addClass("loaded")
+                    }, 4000);
+
+                    playbut.click(function () {
+
+                        $(".intro").animate({ opacity: 0 }, 3000, function () {
+                            $(".intro").hide();
+                            $(".four-spots").animate({opacity:1},3000);
+
+                        })
+
+                    });
+                });
+
+
+
+
+            }
+
+
+
+
+            function waitLoad(img, f) {
+                console.log(img);
+                var im = new Image();
+                im.onload = function () {
+                    //console.log("loaded",$(img).attr("src"));
+                    img.attr("data-ratio", (this.naturalHeight / this.naturalWidth));
+                    f(img);
+                };
+                im.src = img.attr("src");
+
+            }
+
+        })
+
+
+
+    </script>
 </body>
 
 </html>
