@@ -1,4 +1,6 @@
-/.DS_Store
-/src/*
-/stuff/*
+.DS_Store
+**/.DS_Store
+src/*
+stuff/*
+*.less
  
