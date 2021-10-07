@@ -263,6 +263,7 @@ nav a {
 }
 .four-spots .fs-line > div figure figcaption {
   position: absolute;
+  cursor: pointer;
   color: white;
   opacity: 0.2;
   transition: opacity 0.9s;
