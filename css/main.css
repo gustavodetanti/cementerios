@@ -321,16 +321,16 @@ nav a {
 }
 .intro .intro-txt .dtxt h1 {
   font-size: 32px;
-  color: white;
+  color: #f2f2f2;
   text-align: center;
   margin: 0;
   opacity: 0;
 }
 .intro .intro-txt .dtxt h3 {
   font-size: 16px;
-  color: white;
+  color: #efefef;
   text-align: center;
-  margin: 0;
+  margin: 4px 0 0 0;
   opacity: 0;
 }
 .intro .intro-txt .dtxt .play {
