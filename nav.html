@@ -10,7 +10,8 @@
     <style>
         body {
             margin: 0;
-            background-color: black;;
+            background-color: black;
+            ;
         }
     </style>
 </head>
@@ -28,7 +29,7 @@
                 <h3>¿un lugar para qué muerte?</h3>
 
                 <br><br><br>
-                <span class='play'><svg width='32' height='32' id="icon-play3" viewBox="0 0 32 32">
+                <span class='play'><svg width='48' height='48' id="icon-play3" viewBox="0 0 32 32">
                         <path fill='#bd52ff'
                             d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z">
                         </path>
@@ -132,7 +133,7 @@
 
                         $(".intro").animate({ opacity: 0 }, 3000, function () {
                             $(".intro").hide();
-                            $(".four-spots").animate({opacity:1},3000);
+                            $(".four-spots").animate({ opacity: 1 }, 3000);
 
                         })
 
@@ -160,7 +161,45 @@
             }
 
         })
-     </script>
+
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+                ini( [...document.querySelectorAll('.four-spots figure figcaption')]);
+
+            });
+
+ 
+        function ini(spots) {
+             
+            init()
+
+            function init() {
+console.log(1);
+                spots.forEach(element => {
+                    element.addEventListener("click", spotClick, false);
+                });
+
+            }
+
+
+
+            function spotClick(e) {
+                if (e) e.preventDefault();
+                console.log("click",this);
+                var white = document.createElement('div');
+                white.classList.add('whiteCover');
+                document.body.appendChild(white);
+                requestAnimationFrame(() => {
+                    white.classList.add('visible');
+
+                });
+
+            }
+
+        }
+
+
+    </script>
 </body>
 
 </html>

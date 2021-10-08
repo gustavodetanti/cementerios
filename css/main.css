@@ -277,6 +277,10 @@ nav a {
   font-weight: 200;
   margin: 2px 0 0 0;
 }
+.four-spots .fs-line > div figure figcaption:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
 .four-spots .fs-line:nth-child(1) > div:nth-child(2) figcaption {
   top: auto;
   bottom: 32px;
@@ -298,6 +302,8 @@ nav a {
 .intro .full {
   opacity: 0;
   transition: opacity 3s;
+  width: calc(100% - 90px);
+  object-fit: none;
 }
 .intro .full.loaded {
   opacity: 1 !important;
@@ -347,4 +353,21 @@ nav a {
 .intro .intro-txt .dtxt .play.loaded {
   opacity: 1 !important;
   transition: opacity 2s;
+}
+.whiteCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  max-height: 100vh;
+  opacity: 0;
+  background-color: white;
+  transition: opacity 3s;
+}
+.whiteCover.visible {
+  opacity: 1;
+  transition: opacity 3s;
+  z-index: 1000;
 }
