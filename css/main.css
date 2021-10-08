@@ -302,8 +302,6 @@ nav a {
 .intro .full {
   opacity: 0;
   transition: opacity 3s;
-  width: calc(100% - 90px);
-  object-fit: none;
 }
 .intro .full.loaded {
   opacity: 1 !important;
