@@ -1,0 +1,31 @@
+body{
+    margin:48px;
+}
+.section-first-div{
+
+    display: flex;
+    align-items: center;
+
+
+}
+.section-first-div div:nth-child(1){
+flex: 1;
+padding: 46px;
+
+}
+
+
+
+.section-first-div div:nth-child(1) img{
+ max-width: 100%;
+ border:16px solid #333333;
+}
+
+
+.section-first-div div:nth-child(2){
+flex: 1;
+padding: 16px;
+
+}
+
+
