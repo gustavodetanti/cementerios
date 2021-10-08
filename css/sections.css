@@ -8,7 +8,7 @@ body{
 
 
 }
-.section-first-div div:nth-child(1){
+.section-first-div div.foto{
 flex: 1;
 padding: 46px;
 
@@ -16,13 +16,13 @@ padding: 46px;
 
 
 
-.section-first-div div:nth-child(1) img{
+.section-first-div div.foto img{
  max-width: 100%;
  border:1px solid #333333;
 }
 
 
-.section-first-div div:nth-child(2){
+.section-first-div div.texto{
 flex: 1;
 padding: 16px;
 
