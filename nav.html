@@ -40,13 +40,24 @@
 
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
     <div class='four-spots'>
 
         <div class='fs-line'>
             <div>
                 <figure>
                     <img src='img/Identidades/Fotoinicio.jpg'>
-                    <figcaption>
+                    <figcaption data-id="identidades">
                         <h2>Identidades</h2>
                     </figcaption>
                 </figure>
@@ -57,7 +68,7 @@
             <div>
                 <figure>
                     <img src='img/Otros habitantes/Fotoinicio.jpg'>
-                    <figcaption>
+                    <figcaption data-id="habitantes">
 
                         <h2>Otros habitantes</h2>
 
@@ -75,7 +86,7 @@
             <div>
                 <figure>
                     <img src='img/Cuidadores/Foto de ingreso.jpg'>
-                    <figcaption>
+                    <figcaption data-id="cuidadores">
                         <h2>Los cuidadores</h2>
                         <h3>Historias intergeneracionales en el trabajo de cuidado</h3>
                     </figcaption>
@@ -85,7 +96,7 @@
             <div>
                 <figure>
                     <img src='img/Deudos/La historia de Joaco/3.jpg'>
-                    <figcaption>
+                    <figcaption data-id="deudos">
                         <h2>Los deudos</h2>
                         <h3>Historias de memoria y de vida</h3>
                     </figcaption>
@@ -185,14 +196,18 @@ console.log(1);
 
             function spotClick(e) {
                 if (e) e.preventDefault();
-                console.log("click",this);
+               let idd=this.getAttribute("data-id");
                 var white = document.createElement('div');
                 white.classList.add('whiteCover');
                 document.body.appendChild(white);
                 requestAnimationFrame(() => {
                     white.classList.add('visible');
 
-                });
+                 });
+
+                 setTimeout(()=>{
+                    window.location.href=idd+"/";
+                 },3000);
 
             }
 
