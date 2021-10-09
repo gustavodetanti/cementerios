@@ -24,8 +24,8 @@ padding: 52px;
 
 .section-first-div div.texto{
 flex: 1;
-padding: 24px;
-
+ 
+padding: 46px;
 }
 
 
@@ -38,3 +38,25 @@ img.full {
 }
 
 
+*{
+    font-family: sans-serif;
+    }
+
+
+.texto{
+    color:#ffeebb;
+    font-weight: 100;
+    letter-spacing: 1px;
+line-height: 24px;
+padding: 46px;
+}
+
+.thumbs{
+    font-size: 0;
+
+    margin:0px auto; 
+}
+.thumbs img{
+height:120px;
+margin:0px;
+}
