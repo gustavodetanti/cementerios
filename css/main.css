@@ -352,6 +352,17 @@ nav a {
   opacity: 1 !important;
   transition: opacity 2s;
 }
+.explorar {
+  opacity: 0;
+  color: white;
+  cursor: pointer;
+  transition: opacity 6s;
+  display: block;
+}
+.explorar.visible {
+  opacity: 1;
+  transition: opacity 6s;
+}
 .whiteCover {
   position: fixed;
   top: 0;
