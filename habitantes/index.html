@@ -7,32 +7,110 @@
     <title>Cementerio - Otros habitantes</title>
     <link href='../css/sections.css' rel='stylesheet'>
 <style>
-    
+*{
+    color:#111111;
+}    
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.texto{
+    padding:40px;
+}
 img.full {
 object-fit: none;
 width: 100%;
-position:absolute;
+position:relative;
 top:0;
 left:0;
 height:auto;
+}
+
+
+.fotos {
+    font-size: 0;
+
+}
+.fotos img{
+    height:180px;
 }
 
 </style>
  </head>
 <body>
     <img class='full' src='../img/Otros habitantes/Fotoinicio.jpg'>    
-<div class='section-first-div'>
-<div  class='foto'>
-
-</div>
-<div  class='texto'>
-
+ <div  class='texto'>
+<h2></h2>
+<h3></h3>
+<p>
 Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolorum iste placeat esse tempore optio impedit, officiis, inventore voluptatibus voluptatem perspiciatis rem? Est, ratione. Sit voluptatum vero ratione soluta eius, quia dignissimos, ipsa error inventore doloribus dolorum consequatur nesciunt expedita praesentium optio illum illo dolore sequi, obcaecati eveniet. Quasi, sit?
+</p>
 </div>
+ 
 
-</div>
+
+<div class='fotos'></div>
+<script>
+let data={ 
+    "title":"Otros habitantes",
+    "subtitle":"subt",
+    "text":"lorem text",
+    
+    
+    "fotos":["habitantes-stuff/1.JPG"
+,"habitantes-stuff/2.jpg"
+,"habitantes-stuff/3.JPG"
+,"habitantes-stuff/4.JPG"
+,"habitantes-stuff/5.JPG"
+,"habitantes-stuff/6.JPG"
+,"habitantes-stuff/7.jpg"
+,"habitantes-stuff/7(1).JPG"],
+"audios":["habitantes-stuff/campanas.m4a"
+,"habitantes-stuff/cotorras.m4a"
+,"habitantes-stuff/cotorras2.m4a"],
+"videos":[]
+
+}
 
 
+window.addEventListener('DOMContentLoaded', (ev) => {
+
+    /*
+fetch("habitantes.json").then((d)=>{
+return d.text()
+}).then(txt=>{
+    console.log(txt)
+return txt.json()
+}).then(json=>{
+    console.log(json)
+
+    Fotos(json.fotos)
+Audios(json.audios);
+}).catch((e)=>{});
+*/
+
+
+Fotos(data.fotos);
+})//loaded
+
+
+
+function Fotos(fotosArr){
+
+    console.log(fotosArr);
+    let str='';
+     fotosArr.map(src=>{
+    str+=`<img src='${src}'>`
+     });
+document.querySelector(".fotos").innerHTML=str;
+
+
+}
+
+
+</script>
 
 
 </body>
