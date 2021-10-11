@@ -199,7 +199,7 @@ return;
 
 
         window.addEventListener('DOMContentLoaded', (event) => {
-                ini( [...document.querySelectorAll('.four-spots figure figcaption')]);
+                ini( [...document.querySelectorAll('.four-spots figure')]);
 
             });
 
@@ -211,7 +211,15 @@ return;
             function init() {
                 console.log(1);
                 spots.forEach(element => {
-                    element.addEventListener("click", spotClick, false);
+                    element.querySelector("figcaption").addEventListener("click", spotClick, false);
+                    element.querySelector("figcaption").addEventListener("mouseover", (e)=>{
+                        element.querySelector("img").classList.add('overed')
+                    }, false);
+                    
+                    element.addEventListener("mouseout", (e)=>{
+                        element.querySelector("img").classList.remove('overed')
+                    }, false);
+                    
                 });
 
             }

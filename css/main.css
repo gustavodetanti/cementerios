@@ -227,7 +227,7 @@ nav a {
   flex: 1;
   border-radius: 4px;
   overflow: hidden;
-  margin: 0px;
+  margin: 2px;
 }
 .four-spots .fs-line > div figure {
   position: relative;
@@ -236,6 +236,18 @@ nav a {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  /*&:hover {
+                    img {
+                        opacity: 1;
+                        transition: all 0.6s ease-in-out;
+                        transform: scale(1.1, 1.1);
+                    }
+                    figcaption {
+                        transition: all 0.6s ease-in-out;
+                        color: white; 
+                        opacity: 1;
+                    }
+                }*/
 }
 .four-spots .fs-line > div figure img {
   width: 100%;
@@ -247,15 +259,10 @@ nav a {
   position: absolute;
   margin: 0px;
 }
-.four-spots .fs-line > div figure:hover img {
-  opacity: 0.8;
+.four-spots .fs-line > div figure img.overed {
+  opacity: 1;
   transition: all 0.6s ease-in-out;
   transform: scale(1.1, 1.1);
-}
-.four-spots .fs-line > div figure:hover figcaption {
-  transition: all 0.6s ease-in-out;
-  color: white;
-  opacity: 1;
 }
 .four-spots .fs-line > div figure figcaption {
   position: absolute;
@@ -274,8 +281,9 @@ nav a {
   margin: 2px 0 0 0;
 }
 .four-spots .fs-line > div figure figcaption:hover {
-  opacity: 0.7;
+  opacity: 1;
   transition: opacity 0.2s;
+  color: white;
 }
 .four-spots .fs-line > div figure.top-left figcaption {
   text-align: right;
