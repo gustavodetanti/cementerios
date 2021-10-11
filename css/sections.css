@@ -60,3 +60,28 @@ padding: 46px;
 height:120px;
 margin:0px;
 }
+
+
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: #33333355;
+z-index:1000;
+}
+
+header nav{
+padding:8px;
+
+}
+
+header nav a{
+font-size: 12px;
+    text-decoration: none;
+ margin:0 8px;    
+color:white;
+display: inline-block;
+
+    }
