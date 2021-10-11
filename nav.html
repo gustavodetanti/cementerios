@@ -205,7 +205,7 @@ return;
             init()
 
             function init() {
-console.log(1);
+                console.log(1);
                 spots.forEach(element => {
                     element.addEventListener("click", spotClick, false);
                 });
@@ -216,13 +216,13 @@ console.log(1);
 
             function spotClick(e) {
                 if (e) e.preventDefault();
+                return;
                let idd=this.getAttribute("data-id");
                 var white = document.createElement('div');
                 white.classList.add('whiteCover');
                 document.body.appendChild(white);
                 requestAnimationFrame(() => {
                     white.classList.add('visible');
-
                  });
 
                  setTimeout(()=>{
@@ -240,16 +240,15 @@ console.log(1);
 
 function createAudio(fname,folder="audios"){
     var audio=document.createElement('audio');
-    
     var source= document.createElement('source');
-source.type= `audio/ogg`;
-source.src= `${folder}/${fname}.ogg`;
-audio.appendChild(source);
-source= document.createElement(`source`);
-source.type= `audio/mpeg`;
-source.src= `${folder}/${fname}.mp3`;
-audio.appendChild(source);
- 
+        source.type= `audio/ogg`;
+        source.src= `${folder}/${fname}.ogg`;
+        audio.appendChild(source);
+        source= document.createElement(`source`);
+        source.type= `audio/mpeg`;
+        source.src= `${folder}/${fname}.mp3`;
+        audio.appendChild(source);
+        
 return {play:()=>{audio.play()}, 
 stop:()=>{
     audio.pause();
