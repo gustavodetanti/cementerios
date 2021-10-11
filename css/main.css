@@ -3,7 +3,7 @@
 }
 body {
   margin: 0;
-  background-color: #cccccc;
+  background-color: #fafafa;
   color: #222222;
   letter-spacing: 1px;
   font-family: sans-serif;
@@ -215,7 +215,7 @@ nav a {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background: black;
+  background: #fafafa;
   opacity: 0;
 }
 .four-spots .fs-line {
@@ -225,16 +225,9 @@ nav a {
 }
 .four-spots .fs-line > div {
   flex: 1;
-}
-.four-spots .fs-line > div:nth-child(2) figcaption {
-  text-align: left;
-  top: 32px;
-  left: 32px;
-}
-.four-spots .fs-line > div:nth-child(1) figcaption {
-  text-align: right;
-  top: 32px;
-  right: 32px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0px;
 }
 .four-spots .fs-line > div figure {
   position: relative;
@@ -245,27 +238,30 @@ nav a {
   padding: 0;
 }
 .four-spots .fs-line > div figure img {
-  object-fit: cover;
   width: 100%;
   height: 100%;
-  opacity: 1;
+  object-fit: cover;
+  opacity: 0;
   transform: scale(1, 1);
   transition: all 0.6s ease-in-out;
+  position: absolute;
+  margin: 0px;
 }
 .four-spots .fs-line > div figure:hover img {
-  opacity: 0.2;
+  opacity: 0.8;
   transition: all 0.6s ease-in-out;
   transform: scale(1.1, 1.1);
 }
 .four-spots .fs-line > div figure:hover figcaption {
+  transition: all 0.6s ease-in-out;
+  color: white;
   opacity: 1;
-  transition: opacity 0.9s;
 }
 .four-spots .fs-line > div figure figcaption {
   position: absolute;
   cursor: pointer;
-  color: white;
-  opacity: 0.2;
+  color: #440044;
+  opacity: 0.9;
   transition: opacity 0.9s;
 }
 .four-spots .fs-line > div figure figcaption h2 {
@@ -281,13 +277,41 @@ nav a {
   opacity: 0.7;
   transition: opacity 0.2s;
 }
-.four-spots .fs-line:nth-child(1) > div:nth-child(2) figcaption {
-  top: auto;
+.four-spots .fs-line > div figure.top-left figcaption {
+  text-align: right;
   bottom: 32px;
+  right: 32px;
 }
-.four-spots .fs-line:nth-child(1) > div:nth-child(1) figcaption {
-  top: auto;
+.four-spots .fs-line > div figure.top-left img {
+  bottom: 0;
+  right: 0;
+}
+.four-spots .fs-line > div figure.top-right figcaption {
+  text-align: left;
   bottom: 32px;
+  left: 32px;
+}
+.four-spots .fs-line > div figure.top-right img {
+  bottom: 0;
+  left: 0;
+}
+.four-spots .fs-line > div figure.bottom-left figcaption {
+  text-align: right;
+  top: 32px;
+  right: 32px;
+}
+.four-spots .fs-line > div figure.bottom-left img {
+  top: 0;
+  right: 0;
+}
+.four-spots .fs-line > div figure.bottom-right figcaption {
+  text-align: left;
+  top: 32px;
+  left: 32px;
+}
+.four-spots .fs-line > div figure.bottom-right img {
+  top: 0;
+  left: 0;
 }
 .intro {
   position: fixed;

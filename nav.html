@@ -10,7 +10,7 @@
     <style>
         body {
             margin: 0;
-            background-color: black;
+            background-color: #fafafa;
             ;
         }
 
@@ -62,10 +62,11 @@
 
         <div class='fs-line'>
             <div>
-                <figure>
+                <figure class='top-left'>
                     <img src='img/Identidades/Fotoinicio.jpg'>
                     <figcaption data-id="identidades">
                         <h2>Identidades</h2>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
                     </figcaption>
                 </figure>
             </div>
@@ -73,12 +74,13 @@
 
 
             <div>
-                <figure>
+                <figure class='top-right'>
                     <img src='img/Otros habitantes/Fotoinicio.jpg'>
                     <figcaption data-id="habitantes">
 
                         <h2>Otros habitantes</h2>
-
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                    
 
                     </figcaption>
                 </figure>
@@ -91,7 +93,7 @@
 
         <div class='fs-line'>
             <div>
-                <figure>
+                <figure class='bottom-left'>
                     <img src='img/Cuidadores/Foto de ingreso.jpg'>
                     <figcaption data-id="cuidadores">
                         <h2>Los cuidadores</h2>
@@ -101,7 +103,7 @@
             </div>
 
             <div>
-                <figure>
+                <figure class='bottom-right'>
                     <img src='img/Deudos/La historia de Joaco/3.jpg'>
                     <figcaption data-id="deudos">
                         <h2>Los deudos</h2>
@@ -130,8 +132,10 @@
             let h3 = $(".intro .intro-txt h3");
 
 let voice=createAudio('intro',"audios");
-            splash();
-
+            //splash();
+            $(".intro").hide();
+            $(".four-spots").show()
+            $(".four-spots").animate({ opacity: 1 }, 1000);
 
             function splash() {
                 console.log("splash");
