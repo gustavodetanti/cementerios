@@ -1,0 +1,17 @@
+.DS_Store
+**/.DS_Store
+src/*
+stuff/*
+**/*.less
+
+ 
+
+**/*.mp4
+**/*.m4a
+**/*.zip
+
+# Make changes in .gitignore file.
+# Run git rm -r --cached . 
+# Run git add . 
+# git commit -m "Commit message" 
+# or just git commit or continue working.
