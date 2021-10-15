@@ -1,5 +1,5 @@
 body{
-    margin:48px;
+    margin:90px 48px ;
 }
 .section-first-div{
 
@@ -64,23 +64,23 @@ margin:0px;
 
 
 header{
-    position:fixed;
+position:absolute;
     top:0;
     left:0;
     width:100%;
-    background-color: #ffffffaa;
+ 
 z-index:1000;
 }
 
 header nav{
-padding:8px;
+padding:16px;
 
 }
 
 header nav a{
 font-size: 12px;
     text-decoration: none;
- margin:0 8px;    
+ margin:0 8px 8px 0;    
 color:#554455;
 display: inline-block;
 
